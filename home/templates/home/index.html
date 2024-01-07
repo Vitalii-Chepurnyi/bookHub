@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- index.html content starts here -->
+<div class="container-fluid">
+    <div class= "row justify-content-md-center">
+        <div class="col-6 bg-primary">
+            <div class="row">
+                <div class="col-3 bg-secondary">
+                    <p>IMAGE</p>
+                </div>
+                <div class="col-7 bg-success">
+                    <div class="row">
+                        <p>TITLE</p>
+                    </div>
+                    <div class="row">
+                        <p>DESCRIPTION</p>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>DATE</p>
+                        </div>
+                        <div class="col">
+                            <p>LOCATION</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 bg-secondary">
+                    <div class="row">
+                        <p>$30.00</p>
+                    </div>
+                    <div class="row">
+                        <p>includes taxes and charges</p>
+                    </div>
+                    <div class="row">
+                        <button>See availability ></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+</div>
+
+<!-- index.html content ends here -->
+{% endblock %}
