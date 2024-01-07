@@ -1,1 +1,1 @@
-web: gunicorn my_project.wsgi
+web: gunicorn book_market.wsgi
