@@ -5,4 +5,5 @@ from .models import Listing
 # Create your views here.
 
 class MarketList(generic.ListView):
-    model = Listing
+    queryset = Listing.objects.filter(status=1)
+    template_name = "listing_list.html"
