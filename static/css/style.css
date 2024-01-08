@@ -86,3 +86,20 @@ body {
 .page-list {
     margin-top: 3%;
 }
+
+.navbar {
+    background-color: rgb(44, 42, 53);
+}
+
+nav a {
+    color: #fff;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    background-color: rgb(44, 42, 53);
+}
