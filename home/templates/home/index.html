@@ -4,40 +4,46 @@
 
 <!-- index.html content starts here -->
 <div class="container-fluid">
-    <div class= "row justify-content-md-center">
-        <div class="col-6 bg-primary">
-            <div class="row">
-                <div class="col-3 bg-secondary">
-                    <p>IMAGE</p>
-                </div>
-                <div class="col-7 bg-success">
-                    <div class="row">
-                        <p>TITLE</p>
+    <div class="container">
+        {% for listing in listing_list %}
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-3 max-width-column ">
+            <!-- Content for Column 1 -->
+            <a href="">{{ listing.image }}</a>
+          </div>
+          <div class="col-md-6 max-width-column">
+            <!-- Content for Column 2 -->
+            <p>{{ listing.title }}</p>
+             <div class="col">
+                {{ listing.description }}
+             </div>
+             <div class="col">
+                <div class="row">
+                    <div class="col">
+                        {{ listing.market_date }}
                     </div>
-                    <div class="row">
-                        <p>DESCRIPTION</p>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p>DATE</p>
-                        </div>
-                        <div class="col">
-                            <p>LOCATION</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-2 bg-secondary">
-                    <div class="row">
-                        <p>$30.00</p>
-                    </div>
-                    <div class="row">
-                        <p>includes taxes and charges</p>
-                    </div>
-                    <div class="row">
-                        <button>See availability ></button>
+                    <div class="col bg-warning">
+                        <p>Location</p>
                     </div>
                 </div>
+             </div>
+          </div>
+          <div class="col-md-3 max-width-column">
+            <!-- Content for Column 3 -->
+            <div class="col">
+                <p>per table</p>
+                <h1>{{ listing.stall_price }}</h1>
+                <p>Includes taxes and charges</p>
             </div>
+            <div class="col">
+                <a href="" class="button">See availability ></a>
+            </div>
+          </div>
+        </div>
+        {% if forloop.counter|divisibleby:3 %}
+        <div class="row">
+            {% endif %}
+            {% endfor %}
         </div>
     </div>
     {% if is_paginated %}
