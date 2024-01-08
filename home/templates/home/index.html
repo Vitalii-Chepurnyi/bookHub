@@ -6,23 +6,25 @@
 <div class="container-fluid">
     <div class="container">
         {% for listing in listing_list %}
-        <div class="row justify-content-center mb-4">
-          <div class="col-md-3 max-width-column ">
+        <div class="row justify-content-center main_container">
+          <div class="col-md-3 max-width-column">
             <!-- Content for Column 1 -->
             <a href="">{{ listing.image }}</a>
           </div>
           <div class="col-md-6 max-width-column">
             <!-- Content for Column 2 -->
-            <p>{{ listing.title }}</p>
+            <h1>{{ listing.title }}</h1>
+            <a href="" class="listing-link">
              <div class="col">
-                {{ listing.description }}
+                <p>{{ listing.description }}</p>
              </div>
+            </a>
              <div class="col">
                 <div class="row">
                     <div class="col">
-                        {{ listing.market_date }}
+                        <p>{{ listing.market_date }}</p>
                     </div>
-                    <div class="col bg-warning">
+                    <div class="col">
                         <p>Location</p>
                     </div>
                 </div>
@@ -30,13 +32,14 @@
           </div>
           <div class="col-md-3 max-width-column">
             <!-- Content for Column 3 -->
-            <div class="col">
-                <p>per table</p>
-                <h1>{{ listing.stall_price }}</h1>
+            <div class="col price">
+                <h2>{{ listing.stall_price }}</h2>
                 <p>Includes taxes and charges</p>
             </div>
             <div class="col">
-                <a href="" class="button">See availability ></a>
+                <a href="" class="button-link">
+                    <button type="button" class="button">See availability ></button>
+                </a>
             </div>
           </div>
         </div>
@@ -47,10 +50,10 @@
         </div>
     </div>
     {% if is_paginated %}
-    <nav aria-label="Page navigation">
+    <nav aria-label="Page navigation" class="page-list">
         <ul class="pagination justify-content-center">
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            <li><a href="?page={{ page_obj.next_page_number }}" class="button"> NEXT &raquo;</a></li>
             {% endif %}
         </ul>
     </nav>
