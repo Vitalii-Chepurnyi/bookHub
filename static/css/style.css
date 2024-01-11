@@ -87,6 +87,55 @@ body {
     box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
 }
 
+.reserve-button {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    appearance: none;
+    backface-visibility: hidden;
+    background-color: #27ae60;
+    border-radius: 8px;
+    border-style: none;
+    box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: normal;
+    line-height: 1.5;
+    outline: none;
+    overflow: hidden;
+    padding: 13px 50px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transform: translate3d(0, 0, 0);
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.reserve-button:hover {
+    background-color: #1e8449;
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: .35s;
+}
+
+.reserve-button:active {
+    transform: translateY(2px);
+    transition-duration: .35s;
+}
+
+.reserve-button:hover {
+    box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
+}
+
 .page-list {
     margin-top: 3%;
 }
@@ -130,7 +179,50 @@ footer {
 }
 
 .detail {
+    margin-bottom: 5%;
+    margin-top: 2%;
     display: flex;
+    justify-content: center;
+    background-color: #2929292d;
+    padding-top: 50px;
+}
+
+.temrs-conditions {
+    font-size: 10px;
+    margin-top: 20px;
+}
+
+.temrs-conditions h1 {
+    font-size: 10px;
+}
+
+.listing-description {
+    font-size: 16px;
+}
+
+.listing-description h1 {
+    font-size: 24px;
+}
+
+.listing-image {
+    background-color: red;
+}
+
+.detail-title {
+    text-align: center;
+}
+
+.detail-time-date {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.detail-time-date p {
+    font-size: 24px;
+}
+
+.detail-price {
+    text-align: right;
 }
 /* media max-width 480px */
 @media only screen and (max-width: 480px){ 

@@ -3,29 +3,72 @@
 {% load static %}
 
 <div class="container-fluid">
-    <div class="container detail">
-        <div class="col">
-            <div class="row bg-warning">
-                <h1>Hello</h1>
-            </div>
-            <div class="row bg-info">
-                <h1>Hello</h1>
+    <div class="row detail">
+        <div class="col-2 listing-description">
+            <div class="row listing-description">
+                <h1>Description:</h1>
+                <hr>
+                <p>{{ listing.description }}</p>
             </div>
         </div>
-        <div class="col bg-danger">
-            <div class="row bg-secondary">
-                <div class="col bg-primary">
-                    <h1>Hello</h1>
+        <div class="col-6">
+            <div class="row">
+                <div class="col listing-image">
+                    <a href="">{{ listing.image }}</a>
                 </div>
-                <div class="col bg-warning">
-                    <div class="row bg-info">1</div>
-                    <div class="row bg-secondary">2</div>
-                    <div class="row bg-danger">3</div>
-                    <div class="row bg-warning">4</div>
+                <div class="col">
+                    <div class="row detail-title">
+                        <h1>{{ listing.title }}</h1>
+                        <hr>
+                    </div>
+                    <div class="row">Location</div>
+                    <div class="row detail-time-date">
+                        <div class="col">
+                            <h2>Start at:</h2>
+                            <p>{{ listing.market_time }}</p>
+                        </div>
+                        <div class="col">
+                            <h2>Date:</h2>
+                            <p>{{ listing.market_date }}</p>
+                        </div>
+                    </div>
+                    <div class="row temrs-conditions">
+                        <h1>Terms&Conditions</h1>
+                        <p>
+                            Clearly outline the process for making a reservation or booking.
+                            Specify the required information, such as name, contact details, 
+                            payment information, and any other relevant details.
+                            Clearly state the conditions under which a booking can be canceled.
+                            Outline any cancellation fees or penalties.
+                            Specify the refund policy, including timelines for processing refunds.
+                            Provide details on payment methods accepted.
+                            Specify when payment is due whether it's at the time of booking, upon arrival, or according to a specific schedule.
+                        </p>
+                        <h1>{{ listing.created_on}}</h1>
+                        <hr>
+                    </div>
                 </div>
             </div>
-            <div class="row bg-success">
-                <h1>Hello</h1>
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="reserve-button">Reserve</button>
+                </div>
+                <div class="col detail-price">
+                    <h2>{{ listing.stall_price }}</h2>
+                    <p>Includes taxes and charges</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="row">
+                    <h2>Comments:</h2>
+                </div>
+                <div class="col-6">
+                    <p>1</p>
+                </div>
+                <div class="col-6">
+                    <p>2</p>
+                </div>
             </div>
         </div>
     </div>
