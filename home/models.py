@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from location_field.models.plain import PlainLocationField
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -12,10 +13,12 @@ class Listing(models.Model):
     author = models.ForeignKey(
     User, on_delete=models.CASCADE, related_name="market_post"
     )
-    description = models.TextField()
+    description = models.TextField(max_length=1000, unique=False)
     stall_price = models.CharField(max_length=6, unique=False)
     market_date = models.DateField(null=False, blank=True)
     market_time = models.TimeField(null=False, blank=True)
+    city = models.CharField(max_length=255)
+    location = PlainLocationField(based_fields=['city'], zoom=7)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
 
@@ -39,3 +42,5 @@ class Comments(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
+
+    
