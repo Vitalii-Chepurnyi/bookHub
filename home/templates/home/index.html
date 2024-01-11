@@ -13,8 +13,8 @@
           </div>
           <div class="col-md-6 max-width-column">
             <!-- Content for Column 2 -->
-            <h1>{{ listing.title }}</h1>
-            <a href="" class="listing-link">
+            <h1 id="names">{{ listing.title }}</h1>
+            <a href="{% url 'listing_detail' listing.slug %}" class="listing-link">
              <div class="col">
                 <p>{{ listing.description }}</p>
              </div>
@@ -37,7 +37,7 @@
                 <p>Includes taxes and charges</p>
             </div>
             <div class="col">
-                <a href="" class="button-link">
+                <a href="{% url 'listing_detail' listing.slug %}" class="button-link">
                     <button type="button" class="button">See availability ></button>
                 </a>
             </div>
