@@ -62,6 +62,7 @@
             </div>
         </div>
     </nav>
+    {% block image %}
     <div class="user-log">
     {% if user.is_authenticated %}
         <p class="text-end m-3">Logged/As {{ user }}</p>
@@ -77,6 +78,7 @@
         <img src= "{% static 'images/pexels-mew-wy-4072329.jpg' %}" class="main-image" alt="market stall">
         <img src= "{% static 'images/pexels-julia-volk-6118897.jpg' %}" class="main-image2" alt="market stall">
     </div>
+    {% endblock image %}
     <main class="flex-shrink-0 main-bg">
 
         {% block content %}
@@ -84,6 +86,20 @@
         {% endblock content %}
 
     </main>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            {% for message in messages %}
+            <div class="alert {{ message.tags }} alert-dismissible
+              fade show" id="msg" role="alert">
+              {{ message | safe }}
+              <button type="button" class="btn-close"
+                data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">

@@ -264,6 +264,14 @@ footer {
     font-weight: 500;
 }
 
+.form {
+    box-shadow: 0 5px 10px -6px rgb(2, 216, 2);
+    float: right;
+}
+
+.comment-user {
+    font-weight: 500;
+}
 .approval {
     margin-top: 2%;
     color: rgba(202, 5, 5, 0.548);
@@ -385,6 +393,9 @@ footer {
     }
  }
 @media (max-width: 480px) {
+    .form {
+        float: none;
+    }
     .user-log {
         font-weight: 500;
         background-color: rgba(61, 61, 61, 0.363);
@@ -423,6 +434,10 @@ footer {
     }
     .button {
         margin-top: 0%;
+    }
+    .listing-description p {
+        font-size: 14px;
+        margin-left: 3px;
     }
 }
 
