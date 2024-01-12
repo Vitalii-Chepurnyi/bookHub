@@ -209,6 +209,10 @@ footer {
     padding-bottom: 50px;
 }
 
+.detail-direction {
+    display: flex;
+}
+
 .detail-title {
     text-align: center;
 }
