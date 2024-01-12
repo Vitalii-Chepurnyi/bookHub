@@ -2,6 +2,12 @@ body {
     background-color: rgba(255, 255, 255, 0.473);
 }
 
+.navbar-toggler-icon {
+    padding-top: 5px;
+    font-size: 24px;
+    color:#fff;
+}
+
 .main_container {
     margin-top: 5%;
     box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.15);
@@ -199,6 +205,9 @@ footer {
     background-color: red;
 }
 
+.location {
+    justify-content: center;
+}
 .detail {
     margin-bottom: 5%;
     margin-top: 2%;
@@ -257,6 +266,86 @@ footer {
 
 .faded {
     color: rgba(172, 175, 175, 0.137);
+}
+
+.log-in {
+    text-align: center;
+    background-color: #31313110;
+    margin-top: 2%;
+    box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.185);
+    font-weight: 500;
+}
+
+.sign-in {
+    text-align: center;
+    background-color: #31313110;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.185);
+    font-weight: 500;
+}
+
+.sign-out {
+    font-size: 24px;
+    font-weight: 500;
+    color:rgb(211, 3, 3);
+    padding: 2%;
+    text-align: center;
+    background-color: #31313110;
+    box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.185);
+}
+
+.log-out {
+    text-align: center;
+}
+
+.btn-signup {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    appearance: none;
+    backface-visibility: hidden;
+    background-color: #27ae60;
+    border-radius: 8px;
+    border-style: none;
+    box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: normal;
+    line-height: 1.5;
+    outline: none;
+    overflow: hidden;
+    padding: 13px 50px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transform: translate3d(0, 0, 0);
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.btn-signup:hover {
+    background-color: #1e8449;
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: .35s;
+}
+
+.btn-signup:active {
+    transform: translateY(2px);
+    transition-duration: .35s;
+}
+
+.btn-signup:hover {
+    box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
 }
 /* media max-width 480px */
 @media only screen and (max-width: 480px){ 

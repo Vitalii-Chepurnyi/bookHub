@@ -16,7 +16,7 @@
             <h1 id="names">{{ listing.title }}</h1>
             <a href="{% url 'listing_detail' listing.slug %}" class="listing-link">
              <div class="col">
-                <p>{{ listing.description }}</p>
+                {{ listing.description | safe }}
              </div>
             </a>
              <div class="col">
