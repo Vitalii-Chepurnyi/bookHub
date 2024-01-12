@@ -62,6 +62,13 @@
             </div>
         </div>
     </nav>
+    <div class="user-log">
+    {% if user.is_authenticated %}
+        <p class="text-end m-3">Logged/As {{ user }}</p>
+    {% else %}
+        <p class="text-end m-3">Not logged/In</p>
+    {% endif %}
+    </div>
     <div class="col-12 slogan">
         <h1>Your One-Stop Spot</h1>
         <h2>For Seamless Market Stall Bookings!</h2>
