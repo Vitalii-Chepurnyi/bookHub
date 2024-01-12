@@ -230,6 +230,30 @@ footer {
     border: none;
     background-color: transparent;
 }
+
+.card-body {
+    box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.185);
+}
+
+.author {
+    color: #27ae60;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.created-on-comment {
+    font-weight: 500;
+}
+
+.approval {
+    margin-top: 2%;
+    color: rgba(202, 5, 5, 0.548);
+    font-weight: 500;
+}
+
+.faded {
+    color: rgba(172, 175, 175, 0.137);
+}
 /* media max-width 480px */
 @media only screen and (max-width: 480px){ 
     .main-image{
