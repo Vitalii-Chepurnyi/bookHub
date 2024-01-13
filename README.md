@@ -5,7 +5,7 @@ The website, "Book Your Market," is a platform designed for seamless market stal
 # Key Features:
 # Homepage (home.html):
 ## Navigation Bar:
-![Alt Text](assets/images/main-page.jpg)
+![Alt Text](assets/images_readme/main-page.jpg)
 
 -Responsive Bootstrap navbar with a brand logo and menu button.
 -Dynamic highlighting of active navigation links.
@@ -13,22 +13,22 @@ The website, "Book Your Market," is a platform designed for seamless market stal
 
 -Indicates whether the user is logged in or not.
 ## Slogan Section:
-![Alt Text](assets/images/main-page1.jpg)
+![Alt Text](assets/images_readme/main-page1.jpg)
 
 -Displays a catchy slogan about being the one-stop spot for market stall bookings.
 -Includes visually appealing images of market stalls.
 ## Main Content Section:
-![Alt Text](assets/images/phone-display.jpg)
+![Alt Text](assets/images_readme/phone-display.jpg)
 
 -Placeholder for dynamic content.
 -Designed for responsiveness across various screen sizes.
 ## Dynamic Content:
-![Alt Text](assets/images/details-page.jpg)
+![Alt Text](assets/images_readme/details-page.jpg)
 
 -Displays detailed information about a market stall listing.
 -Images, title, location, date, time, terms and conditions, creation date, and reservation button.
 ## Comments Section:
-![Alt Text](assets/images/details-comments.jpg)
+![Alt Text](assets/images_readme/details-comments.jpg)
 
 -Allows users to leave comments and view existing comments.
 -Conditional rendering based on user authentication and comment approval status.
@@ -40,7 +40,7 @@ The website, "Book Your Market," is a platform designed for seamless market stal
 -Prompts users to sign up if they want to comment.
 # Listings Page (listings.html):
 ## Dynamic Listings Display:
-![Alt Text](assets/images/main-page2.jpg)
+![Alt Text](assets/images_readme/main-page2.jpg)
 
 -Iterates over a list of market stall listings.
 -Responsive layout with Bootstrap grid system.
