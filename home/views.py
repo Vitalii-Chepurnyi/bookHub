@@ -15,6 +15,7 @@ class MarketList(generic.ListView):
 def listing_detail(request, slug):
     queryset = Listing.objects.filter(status=1)
     listing = get_object_or_404(queryset, slug=slug)
+    images = Listing.image
     comments = listing.comments.all().order_by("-created_on")
     comment_count = listing.comments.filter(approved=True).count()
     if request.method == "POST":
@@ -36,6 +37,7 @@ def listing_detail(request, slug):
         request,
         "home/listing_detail.html",
         {"listing": listing,
+         "image": images,
          "comments": comments,
          "comment_count": comment_count,
          "comment_form": comment_form,},

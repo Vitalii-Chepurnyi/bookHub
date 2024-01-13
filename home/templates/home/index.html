@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 
 <!-- index.html content starts here -->
@@ -7,10 +7,15 @@
     <div class="container">
         {% for listing in listing_list %}
         <div class="row justify-content-center main_container">
-          <div class="col-md-3 max-width-column">
-            <!-- Content for Column 1 -->
-            <a href="">{{ listing.image }}</a>
-          </div>
+            {% if listing.image %}
+                <div class="col-md-3 max-width-column market-img">
+                    <img src= "{{ listing.image.url }}" class="listing-img" alt="">
+                </div>
+            {% else %}
+                <div class="col-md-3 max-width-column">
+                    <img src= "{% static 'images/pexels-julia-volk-6118897.jpg' %}" class="listing-img" alt="market stall">
+                </div>
+            {% endif %}
           <div class="col-md-6 max-width-column">
             <!-- Content for Column 2 -->
             <h1 id="names">{{ listing.title }}</h1>

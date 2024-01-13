@@ -178,6 +178,14 @@ footer {
     display: none;
  }
 
+.listing-img {
+    width: 100%;
+    max-height: 350px;
+    min-height: 350px;
+    -webkit-transform: scale(0.999);
+    transform: scale(0.999);
+}
+
 .slogan {
     background-color: rgba(75, 75, 75, 0.699);
     padding: 10px 0px 10px 10%;

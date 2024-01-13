@@ -16,9 +16,15 @@
         </div>
         <div class="col-lg-6 md-12">
             <div class="row detail-direction">
-                <div class="col-lg-6 md-12 bg-warning">
-                    <a href="">{{ listing.image }}</a>
-                </div>
+                  {% if listing.image %}
+                    <div class="col-lg-6 md-12">
+                      <img src= "{{ listing.image.url }}" class="listing-img" alt="">
+                    </div>
+                  {% else %}
+                    <div class="col-lg-6 md-12">
+                      <img src= "{% static 'images/pexels-julia-volk-6118897.jpg' %}" class="listing-img" alt="market stall">
+                    </div>
+                  {% endif %}
                 <div class="col-lg-6 md-12">
                     <div class="row detail-title">
                         <h1>{{ listing.title }}</h1>
