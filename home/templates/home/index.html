@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 
-<!-- index.html content starts here -->
+
 <div class="container-fluid">
     <div class="container">
         {% for listing in listing_list %}
@@ -17,7 +17,6 @@
                 </div>
             {% endif %}
           <div class="col-md-6 max-width-column">
-            <!-- Content for Column 2 -->
             <h1 id="names">{{ listing.title }}</h1>
             <a href="{% url 'listing_detail' listing.slug %}" class="listing-link">
              <div class="col">
@@ -36,7 +35,6 @@
              </div>
           </div>
           <div class="col-md-3 max-width-column">
-            <!-- Content for Column 3 -->
             <div class="col price">
                 <h2>{{ listing.stall_price }}</h2>
                 <p>Includes taxes and charges</p>
@@ -74,5 +72,4 @@
     {% endif %}
 </div>
 
-<!-- index.html content ends here -->
 {% endblock %}

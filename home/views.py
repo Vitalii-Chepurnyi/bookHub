@@ -3,6 +3,7 @@ from django.views import generic
 from django.contrib import messages
 from .models import Listing, Comments
 from .forms import CommentForm
+from .forms import ReservationForm
 
 
 # Create your views here.

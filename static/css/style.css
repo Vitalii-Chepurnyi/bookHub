@@ -181,9 +181,14 @@ footer {
 .listing-img {
     width: 100%;
     max-height: 350px;
-    min-height: 350px;
+    min-height: 300px;
     -webkit-transform: scale(0.999);
     transform: scale(0.999);
+}
+
+.listing-detail-img {
+    width: 100%;
+    max-height: 500px;
 }
 
 .slogan {
@@ -386,6 +391,10 @@ footer {
     margin-top: 2%;
     padding: 20px;
     box-shadow: rgba(51, 51, 51, 0.068) 0 6px 12px;
+}
+
+.alert {
+    box-shadow: rgb(0, 184, 0) 0 6px 12px;
 }
 
 /* media max-width 480px */

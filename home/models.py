@@ -43,4 +43,17 @@ class Comments(models.Model):
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
 
+class Reservation(models.Model):
+    name = models.CharField(max_length=200)
+    surname = models.CharField(max_length=200)
+    goods_products = models.BooleanField(default=False)
+    foods_products = models.BooleanField(default=False)
+    time = models.TimeField(null=False, blank=False)
+    email = models.EmailField()
+    message = models.TextField()
+    reviewed = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"Reservation request from {self.name} | {self.surname} arrival: {self.time}"
+
     
