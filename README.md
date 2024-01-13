@@ -72,3 +72,21 @@ The website, "Book Your Market," is a platform designed for seamless market stal
 
 -Enhancements will be made to introduce filtering options for users to refine their search.
 -Filter options might include location, date, stall type, etc.
+
+# Deployment
+
+This project was deployed on Heroku.
+
+<strong>Steps for deployment:</strong>
+
+-Fork or clone this repository
+
+-Create a new Heroku app
+
+-Set the buildbacks to <strong>Django</strong>, <strong>Bootstrap</strong> and <strong>ESQL</strong>.
+
+-Set up Config Vars for <strong>DATABASE_URL</strong> and <strong>SECRET_KEY</strong>.
+
+-Link the Heroku app to the repository
+
+-Click on Deploy
